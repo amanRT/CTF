@@ -34,15 +34,12 @@ import './Homepage.css';
 import { BrowserRouter as Router, Route, Routes, Outlet } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
 import Body from '../../components/Body/Body'; // Assuming you have a Home component
-import ScoreBoard from '../../components/Scoreboard/ScoreBoard'; // Assuming you have a ScoreBoard component
-import LineChart from '../../components/LineChart/LineChart'; // Assuming you have a Graph component
 // import Challenges from './Challenges'; // Assuming you have a Challenges component
 import Logo from '../../components/Logo/Logo';
 import Progress from '../Progress/Progress';
 
 export default function App() {
     return (
-        <Router>
             <div style={{ backgroundColor: 'black', }}>
                 <div className='logo-app-container'>
                     <div className='logo-container'>
@@ -60,6 +57,5 @@ export default function App() {
                     {/* <Route path="/challenges" element={<Challenges />} /> */}
                 </Routes>
             </div>
-        </Router>
     );
 }

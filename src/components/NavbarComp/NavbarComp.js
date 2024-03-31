@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Badge from "react-bootstrap/Badge";
 import "./MyNavbar.css";
-import logo from "../Images/Logo_CTF-removebg-preview_upscaled.png";
+import logo from "./Logo_CTF-removebg-preview_upscaled.png";
 
 const NavbarComp = () => {
   // Sample points value for demonstration
