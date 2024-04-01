@@ -12,7 +12,7 @@ const NavbarComp = () => {
   return (
     <>
       {/* First Navbar */}
-      <Navbar bg="black" variant="dark" id="nav1">
+      {/* <Navbar bg="black" variant="dark" id="nav1">
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"
@@ -34,7 +34,7 @@ const NavbarComp = () => {
             <Navbar.Brand href="#home">Logout</Navbar.Brand>
           </div>
         </Container>
-      </Navbar>
+      </Navbar> */}
       {/* Second Navbar */}
       <Navbar variant="dark" className="py-1 custom-navbar" id="custom-navbar">
         <Container className="d-flex justify-content-between align-items-center">
