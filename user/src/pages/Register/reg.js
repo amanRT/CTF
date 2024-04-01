@@ -18,7 +18,7 @@ function Reg() {
                 </div>
                 <div className="register-input-box">
                     <span className="icon"><ion-icon name="mail"></ion-icon></span>
-                    <input type="text" required></input>
+                    <input  type="text" required></input>
                     <label>Email</label>
                 </div>
                 <div className="register-input-box">
@@ -48,7 +48,7 @@ function Reg() {
                 </div>
                 </form>
                 
-                <button type="submit">Submit</button>
+                <button id='reg-button' type="submit">Submit</button>
                 <div className="register-register-link">
                     <p>Already have an account? <Link to='/login'>Login</Link></p>
                 </div>

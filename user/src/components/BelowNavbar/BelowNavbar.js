@@ -8,7 +8,7 @@ export default function BelowNavbar() {
     <div className='Below-Navbar-main'>
       
       <div className='glow-on-hover Below-Navbar-content'>
-        <p>Capture the Flag (CTF) in computer security is an exercise in which participants attempt to find text strings, called "flags", which are secretly hidden in purposefully-vulnerable Files, Documents, Programs and Websites.
+        <p><span className='ctf-high'>Capture the Flag (CTF)</span> in computer security is an exercise in which participants attempt to find text strings, called "flags", which are secretly hidden in purposefully-vulnerable Files, Documents, Programs and Websites.
           <br/> <br/>
 Participants competing in teams or individually to solve a series of challenges that test their Cybersecurity skills, such as General Skills, Cryptography, Web Exploitation, Forensics & OSINT.</p>
 

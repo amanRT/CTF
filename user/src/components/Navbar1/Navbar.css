@@ -9,7 +9,7 @@
     height: 90px;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     gap:4vh;
     font-size: large;
@@ -20,7 +20,10 @@
     color: rgb(232, 84, 84);
 }
 
-.Navbar-Links > a{
+.navbar-inside-links{
+  display: flex;
+}
+.navbar-inside-links > a{
   padding-right: 2vw;
   text-decoration: none;
   color: white;
@@ -39,6 +42,7 @@
     font-family: "Orbitron", sans-serif;
     font-weight: 400;
     background-color: black;
+    padding-top: 20px;
     font-style: normal;
     color:rgb(222, 95, 95);
     display: flex;
@@ -85,5 +89,16 @@
     50% { border-color: black }
 }
   
-  
+
+  .navbar-logo > img{
+    display: flex;
+    height: 90px;
+    width: 90px;
+  }
+
+  .navbar-logo{
+    display: flex;
+    padding-left: 10px;
+    align-content: center;
+  }
 

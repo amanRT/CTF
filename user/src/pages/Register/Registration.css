@@ -12,7 +12,7 @@
   #reg-sec{
       display: flex;
       justify-content: center;
-      align-items: center;
+      /* align-items: center; */
       width: 100%;
       height: 160vh;
       background: radial-gradient(circle, #ff5757 9%, rgba(0,0,0,1) 94%);
@@ -31,10 +31,11 @@
       backdrop-filter: blur(50px);
       align-items: center;
       padding: 20px;
+      margin-top: 135px;
     }
     
     
-    body > h2 {
+    .register-login-box  h2 {
       font-size: 2em;
       color: rgb(241, 239, 239);
       text-align: center;
@@ -89,7 +90,7 @@
     }
     
     
-    button {
+    #reg-button {
       width: 100%;
       height: 40px;
       padding: 10px;
@@ -102,7 +103,7 @@
       transition: background-color 0.3s ease;
     }
     
-    button:hover {
+    #reg-button:hover {
       background-color: rgb(117, 51, 51); 
     }
     .register-register-link{
@@ -131,4 +132,8 @@
       .register-input-box{
         width: 290px;
       }
+    }
+
+    .reg-leader:autofill{
+      background-color: transparent;
     }
