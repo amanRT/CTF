@@ -7,10 +7,12 @@
     color: white;
     display: flex;
     justify-content: space-around;
-    border-radius: 0px;
+    align-items: center;
+    min-height:100px;
 }
 
-.footer-contact > p{
+.footer-contact  p{
     color: white;
     margin-right: 3vh;
+    font-weight: bolder;
 }
