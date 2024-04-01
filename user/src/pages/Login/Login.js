@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import './login.css';
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from 'react-router-dom';
 
-
-
-function Login() {
+const Login = ({ setId }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -14,31 +11,28 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:3000/login", {
-                method: "POST",
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
                 headers: {
-                    "Content-Type": "application/json",
+                    'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    email, password
-                }),
+                body: JSON.stringify({ email, password }),
             });
 
             if (!response.ok) {
-                throw new Error("Enter valid credentials"); 
+                throw new Error('Enter valid credentials');
             }
             const data = await response.json();
+            setId(data._id); // Set the user ID using the setId function
             console.log(data);
 
-            navigate('/Homepage'); 
+            navigate('/Homepage');
 
-            
-             
         } catch (error) {
-            console.error("Error:", error);
+            console.error('Error:', error);
             setError(error.message); // Set the error message state
         }
-    }
+    };
 
     return (
         <div className="body">
@@ -46,7 +40,7 @@ function Login() {
                 <div className="login-box">
                     <form onSubmit={handleSubmit}>
                         <h2>Login</h2>
-                        {error && <div className="error-message">{error}</div>} {/* Render error message if there's an error */}
+                        {error && <div className="error-message">{error}</div>}
                         <div className="input-box">
                             <span className="icon"><ion-icon name="mail"></ion-icon></span>
                             <input type="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -69,6 +63,3 @@ function Login() {
 }
 
 export default Login;
-
-
-

@@ -16,13 +16,13 @@ app.post("/userRegister", async (req, res) => {
   try {
  
     const hashedPassword = await bcryptjs.hash(password, numSaltRounds);
-    await UserModel.create({
+       await UserModel.create({
       teamname, leadername,email,password:hashedPassword,contact,player1,player2,player3
     });
 
     res
       .status(201)
-      .json({ message: "User created successfully", status: "Success" });
+      .json({ message: "User created successfully", status: "Success"});
   } catch (error) {
     console.error("Error creating user:", error);
     res.status(500).json({ message: "Failed to create user", status: "Fail" });
@@ -36,6 +36,17 @@ app.get("/getuserRegister", async (req, res) => {
     res.status(500).json({ message: "Failed to fetch the users" });
   }
 });
+app.get("/getspecificuser/:id",async(req,res)=>{
+  const id=req.params.id;
+  
+  try {
+    const users=await UserModel.findOne({_id:id})
+    res.status(200).json(users);
+    
+  } catch (error) {
+    res.status(500).json({message:"Failed to fetch the user"});
+  }
+})
 
 
 app.post("/login",async(req,res)=>{
@@ -49,7 +60,7 @@ app.post("/login",async(req,res)=>{
     const correctpass=bcryptjs.compare(password, user.password);
   if(correctpass)
   {
-      res.status(200).json({message:"User LogedIn Successfully"});
+      res.status(200).json(user._id);
   }
   else{
      res.status(401).json({message:"Invalid Credentials"});
@@ -60,8 +71,9 @@ app.post("/login",async(req,res)=>{
  
 })
 
-app.patch("/updateScore", async (req, res) => {
-  const { id, score } = req.body;
+app.patch("/updateScore/:id", async (req, res) => {
+  const id=req.params.id;
+  const {score} = req.body;
   try {
     const date = new Date(); 
     const hours = ('0' + date.getHours()).slice(-2); 
