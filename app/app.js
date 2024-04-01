@@ -91,10 +91,7 @@ app.get("/selectTopUsers", async (req, res) => {
 
       res
         .status(200)
-        .json({
-          message: "Top users selected successfully",
-          nextroundcandidates: topUsers,
-        });
+        .json( topUsers);
     } else {
       res.status(404).json({ message: "No top users found" });
     }
