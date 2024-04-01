@@ -39,6 +39,7 @@ import Logo from '../../components/Logo/Logo';
 import Progress from '../Progress/Progress';
 
 export default function App() {
+
     return (
             <div style={{ backgroundColor: 'black', }}>
                 <div className='logo-app-container'>

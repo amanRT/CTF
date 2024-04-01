@@ -1,10 +1,12 @@
 import React from "react";
 import './Registration.css';
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar1/Navbar";
 function Reg() {
     return(
         
         <div id="registration-section" className="body">
+            <Navbar/>
             <section id="reg-sec">
             <div className="register-login-box">
             <form action="">
