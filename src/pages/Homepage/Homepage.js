@@ -47,9 +47,10 @@ export default function App() {
                         <Logo />
                     </div>
                     <div className="app-container">
-                        <NavBar />
+                    <NavBar />
                     </div>
                 </div>
+                
                 <Routes>
                     <Route path="/" exact element={<Body />} />
                     {/* <Route path="/scoreboard" element={<ScoreBoard />} /> */}

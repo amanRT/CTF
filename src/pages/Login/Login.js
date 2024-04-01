@@ -1,15 +1,12 @@
 import React from "react";
 import './login.css'
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate hook
+import { Link, useNavigate } from "react-router-dom"; 
 import Navbar from "../../components/Navbar1/Navbar";
 
 function Login() {
-    const navigate = useNavigate(); // Initialize useNavigate hook
+    const navigate = useNavigate(); 
 
     const handleLogin = () => {
-        // Perform login logic here
-        
-        // Redirect to homepage after successful login
         navigate('/homepage');
     };
 

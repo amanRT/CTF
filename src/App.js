@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './components/NavbarComp/NavbarComp';
 import Challenges from './pages/Challenges/challenges';
 import MainLayout from './components/MainLayout/MainLayout';
+import Progress from './pages/Progress/Progress';
 function App() {
 
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Reg />} />
         <Route exact path="/challenges" element={<Challenges />} />
+        <Route path='/progress' element={<Progress/>}/>
       </Routes>
     </Router>
   );
