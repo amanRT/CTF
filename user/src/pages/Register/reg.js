@@ -1,6 +1,6 @@
-import React from "react";
+import React , {useState} from "react";
 import './Registration.css';
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import Navbar from "../../components/Navbar1/Navbar";
 
 function Reg() {
@@ -82,7 +82,7 @@ function Reg() {
                             <input type="text" placeholder="Player 3" onChange={(e) => setPlayer3(e.target.value)} value={player3} />
                             <label>Player 3</label>
                         </div>
-                        <button type="submit">Submit</button>
+                        <button id='reg-button' type="submit">Submit</button>
                     </form>
                     <div className="register-register-link">
                         <p>Already have an account? <Link to='/login'>Login</Link></p>

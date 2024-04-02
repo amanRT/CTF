@@ -24,8 +24,8 @@ const Login = ({ setId }) => {
                 throw new Error('Enter valid credentials');
             }
             const data = await response.json();
-            setId(data._id); // Set the user ID using the setId function
-            console.log(data);
+            //setId(data._id); // Set the user ID using the setId function
+            //console.log(data);
 
             navigate('/Homepage');
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import NavbarComp from './Components/NavbarComp';
-import CardComp from './Components/CardComp';
+import NavbarComp from '../../components/NavbarComp/NavbarComp';
+import CardComp from '../../components/CardComp/CardComp';
 
 const Page2 = () => {
   return (

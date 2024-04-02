@@ -22,6 +22,51 @@ const Page = ({ userId }) => {
           />
         ))}
       </div>
+
+      <h3 className="heading">FORENSICS</h3>
+      <div className="d-flex flex-wrap justify-content-evenly">
+        {questionsData.map((question) => (
+          <CardComp
+            key={question.id}
+            title={question.question}
+            description={`${question.points} points`}
+            alertDesc="Description of the question"
+            hintUrl="URL to hint if available"
+            correctAnswer={question.answer}
+            userId={userId} // Pass the userId prop here
+          />
+        ))}
+      </div>
+
+      <h3 className="heading">WEB</h3>
+      <div className="d-flex flex-wrap justify-content-evenly">
+        {questionsData.map((question) => (
+          <CardComp
+            key={question.id}
+            title={question.question}
+            description={`${question.points} points`}
+            alertDesc="Description of the question"
+            hintUrl="URL to hint if available"
+            correctAnswer={question.answer}
+            userId={userId} // Pass the userId prop here
+          />
+        ))}
+      </div>
+      
+      <h3 className="heading">OSINT</h3>
+      <div className="d-flex flex-wrap justify-content-evenly">
+        {questionsData.map((question) => (
+          <CardComp
+            key={question.id}
+            title={question.question}
+            description={`${question.points} points`}
+            alertDesc="Description of the question"
+            hintUrl="URL to hint if available"
+            correctAnswer={question.answer}
+            userId={userId} // Pass the userId prop here
+          />
+        ))}
+      </div>
       {/* Other sections with CardComp */}
     </div>
   );
