@@ -1,40 +1,41 @@
 import React, { useState, useEffect } from 'react';
 
 function ScoreBoard() {
-    const [scores, setScores] = useState([{
-        "rank": 1,
-        "teamName": "CodeCrafters",
-        "time": "36:15:22",
-        "score": 100,
-    },
-    {
-        "rank": 2,
-        "teamName": "ByteBlasters",
-        "time": "37:45:10",
-        "score": 100,
-    },
-    {
-        "rank": 3,
-        "teamName": "HackHeroes",
-        "time": "39:02:50",
-        "score": 50,
-    },
-    {
-        "rank": 4,
-        "teamName": "PixelPioneers",
-        "time": "40:30:18",
-        "score": 400,
-    },
-    {
-        "rank": 5,
-        "teamName": "BitBusters",
-        "time": "41:55:30",
-        "score": 300,
-    }]);
+    const [scores, setScores] = useState([]);
+    const [button, setButton] = useState(true);
 
-    // useEffect(() => {
-    //     setScores(scores);
-    // }, []); // Empty dependency array ensures this effect runs only once after the initial render
+    useEffect(() => {
+        const fetchScores = async () => {
+            try {
+                let response;
+                if (button) {
+                    response = await fetch('http://localhost:3000/getuserRegister');
+                } else {
+                    response = await fetch('http://localhost:3000/selectTopUsers');
+                }
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch scores');
+                }
+                
+                const data = await response.json();
+                console.log('API Response:', data); // Log the API response for debugging
+                setScores(data);
+            } catch (error) {
+                console.error('Error fetching scores:', error);
+            }
+        };
+
+        fetchScores();
+    }, [button]); // Depend on button state only, not scores
+    
+    const handleTopUserClick = () => {
+        setButton(false);
+    };
+
+    const handleAllUserClick = () => {
+        setButton(true);
+    };
 
     return (
         <div className="recent-order">
@@ -42,25 +43,23 @@ function ScoreBoard() {
             <table>
                 <thead>
                     <tr>
-                        {/* <th>Rank</th> */}
                         <th>Team Name</th>
                         <th>Time</th>
                         <th>Score</th>
-                        {/* <th></th> */}
                     </tr>
                 </thead>
                 <tbody>
                     {scores.map((score, index) => (
                         <tr key={index}>
-                            {/* <td>{score.rank}</td> */}
-                            <td>{score.teamName}</td>
-                            <td>{score.time}</td>
+                            <td>{score.teamname}</td>
+                            <td>{score.lastUpdated}</td>
                             <td>{score.score}</td>
-                            {/* <td className="primary">Details</td> */}
                         </tr>
                     ))}
                 </tbody>
             </table>
+            <button onClick={handleTopUserClick}>Top User</button>
+            <button onClick={handleAllUserClick}>All User</button>
         </div>
     );
 }

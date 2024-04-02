@@ -4,12 +4,10 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from 'react-router-dom';
 import Reg from './pages/Register/reg';
 import Login from './pages/Login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './components/NavbarComp/NavbarComp';
 import Challenges from './pages/Challenges/challenges';
 import MainLayout from './components/MainLayout/MainLayout';
 import Progress from './pages/Progress/Progress';
