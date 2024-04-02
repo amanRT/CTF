@@ -20,7 +20,7 @@
     /* background: radial-gradient(circle, #ff5757 9%, rgba(0,0,0,1) 94%);
   }
    */ 
-  #login-sec{
+   #login-sec{
     display: flex;
     justify-content: center;
     /* align-items: center; */
@@ -152,6 +152,32 @@
     .input-box{
       width: 290px;
     }
+  }
+
+  @media only screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+    /* Your CSS rules specific to Samsung Galaxy S8+ portrait mode */
+    .login-box{
+      width: 310px;
+      align-items: center;
+      height: 50vh;
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: radial-gradient(circle, #ff5757 9%, rgba(0,0,0,1) 94%);
+    transition: background-color 5000s ease-in-out 0s;
+
   }
 
 

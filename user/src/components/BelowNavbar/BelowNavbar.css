@@ -46,7 +46,7 @@
 }
 .Below-Navbar-content > p{
     font-family: poppins;
-    font-size: 25px;
+    font-size: 1.5vw;
     color: rgb(232, 221, 221);
 }
 
@@ -89,11 +89,13 @@
       font-size: 15px;
       width: 100%;
     }
-    .Below-Navbarimage > img{
+    .Below-Navbarimage  img{
         display: flex;
         height: 40vw;
         width: 50vw;
     }
+
+  
   }
 
 
@@ -103,5 +105,123 @@
     transition: text-shadow 0.5s ease; /* Smooth transition for the glow effect */
 }
 
+/* Media query for iPhone 12 */
+@media only screen 
+  and (device-width: 390px) 
+  and (device-height: 844px) 
+  and (-webkit-device-pixel-ratio: 3) { 
+    /* Styles for iPhone 12 */
+    .Below-Navbar-main {
+      font-size: .69em;
+      display: flex;
+      flex-direction: column;
+      height: 172vw;
+      gap: 10vh;
+      align-items: center
+    }
+    .Below-Navbar-content h2{
+      padding-top: 20px;
+    }
+    .Below-Navbar-content{
+      height: 40vh;
+      margin-top: 30px;
+      width: 60vw;
+    }
+    .Below-Navbar-content  p{
+      font-size: 15px;
+      width: 100%;
+    }
+    .Below-Navbarimage  img{
+        display: flex;
+        height: 40vw;
+        width: 50vw;
+    }
+
+    .Below-Navbarimage{
+      margin-top: 5vh;
+    }
+    
+}
+
+/* Media query for iPhone XR */
+@media only screen 
+  and (device-width: 414px) 
+  and (device-height: 896px) 
+  and (-webkit-device-pixel-ratio: 2) { 
+    /* Styles for iPhone XR */
+
+    .Below-Navbar-main {
+      font-size: .69em;
+      display: flex;
+      flex-direction: column;
+      height: 172vw;
+      gap: 10vh;
+      align-items: center
+    }
+    .Below-Navbar-content h2{
+      padding-top: 20px;
+    }
+    .Below-Navbar-content{
+      height: 40vh;
+      margin-top: 30px;
+      width: 60vw;
+    }
+    .Below-Navbar-content  p{
+      font-size: 15px;
+      width: 100%;
+    }
+    .Below-Navbarimage  img{
+        display: flex;
+        height: 40vw;
+        width: 50vw;
+    }
+
+    .Below-Navbarimage{
+      margin-top: 2vh;
+    }
+
+}
+
+/* Media query for iPhone X */
+/* @media only screen 
+  and (device-width: 375px) 
+  and (device-height: 812px) 
+  and (-webkit-device-pixel-ratio: 3) { 
+    
+} */
+
+@media only screen and (max-device-width: 667px) and (orientation: portrait) {
+  /* Your CSS rules specific to iPhone SE portrait mode */
   
+  .Below-Navbar-main {
+    font-size: .69em;
+    display: flex;
+    flex-direction: column;
+    height: 172vw;
+    gap: 10vh;
+    align-items: center
+  }
+  .Below-Navbar-content h2 {
+    padding-top: 10px;
+}
+  .Below-Navbar-content{
+    height: 40vh;
+    margin-top: 18px;
+    width: 60vw;
+  }
+  .Below-Navbar-content  p{
+    font-size: 15px;
+    width: 100%;
+  }
+  .Below-Navbarimage  img{
+      display: flex;
+      height: 40vw;
+      width: 50vw;
+  }
+
+  /* .Below-Navbarimage{
+     margin-top: 5vh; 
+  } */
+}
+
 
