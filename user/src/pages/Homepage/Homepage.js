@@ -1,9 +1,8 @@
 import React from 'react';
 import './Homepage.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import NavBar from '../../components/NavBar/NavBar';
-import Body from '../../components/Body/Body';
-import Challenges from '../Challenges/challenges'; // Assuming you have a Challenges component
+import Body from '../../components/Body/Body'; // Assuming you have a Challenges component
 import Logo from '../../components/Logo/Logo';
 import Progress from '../Progress/Progress';
 

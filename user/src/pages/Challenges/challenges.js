@@ -9,10 +9,12 @@ const Page = ({ id }) => {
   if (id == null) {
     navigate("/homepage");
   }
+  
   return (
     <div className="App">
       <NavbarComp id={id} />
       <div className="d-flex flex-wrap justify-content-evenly">
+      
         {questionsData.map((question) => (
           <CardComp
             key={question.id}

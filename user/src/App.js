@@ -1,19 +1,23 @@
 import HomePage from './pages/Homepage/Homepage';
+import { useState } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
   Route,
   Routes,
+  Navigate,
 } from 'react-router-dom';
 import Reg from './pages/Register/reg';
 import Login from './pages/Login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import NavbarComp from './components/NavbarComp/NavbarComp';
 import Challenges from './pages/Challenges/challenges';
-import Challenges2 from './pages/Challenges/challenges2';
 import MainLayout from './components/MainLayout/MainLayout';
 import Progress from './pages/Progress/Progress';
+import Challenges2 from './pages/Challenges/challenges2';
 function App() {
-
+  const [id, setId] = useState();
+  
   return (
     <Router>
       <Routes>
