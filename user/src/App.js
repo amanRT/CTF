@@ -17,12 +17,13 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<MainLayout />} />
-        <Route exact path="/login" element={<Login />} />
+        <Route path="/" element={<MainLayout />} />
+        <Route path="/login" element={<Login setId={setId} />} /> {/* Use Login component inside Route */}
+        <Route path="/Homepage" element={<HomePage id={id} />} /> {/* Use Homepage component inside Route */}
         <Route exact path="/register" element={<Reg />} />
-        <Route exact path="/challenges" element={<Challenges />} />
-        <Route path="/challenges2" element={<Challenges2 />} />
-        <Route path='/progress' element={<Progress/>}/>
+        <Route  path="/challenges" element={<Challenges id={id}/>} />
+        <Route  path="/challenges2" element={<Challenges2 id={id}/>} />
+        <Route path='/progress' element={<Progress />} />
       </Routes>
     </Router>
   );

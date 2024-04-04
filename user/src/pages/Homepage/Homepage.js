@@ -21,9 +21,9 @@ const Homepage = ({ id }) => {
             </div>
             
             <Routes>
-                <Route path="/" exact element={<Body />} />
+                <Route path="/" exact element={<Body id={id} />} />
                 {/* Pass the id to the Challenges component */}
-                <Route path="/challenges" element={<Challenges id={id} />} />
+                {/* <Route path="/challenges" element={<Challenges id={id} />} /> */}
                 <Route path="/progress" element={<Progress />} />
             </Routes>
         </div>

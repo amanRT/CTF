@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Badge from "react-bootstrap/Badge";
 import "./MyNavbar.css";
 import logo from "./Logo_CTF-removebg-preview_upscaled.png";
 
-const NavbarComp = () => {
-  // Sample points value for demonstration
-  const points = 0;
+const NavbarComp = ({id}) => {
+  const[points,setPoints]=useState(0);
+  const setscore=async()=>{
+    const res =await fetch(`http://localhost:3000/getspecificuser/${id}`)
+    const data=await res.json();
+    setPoints(data.score);
+  }
+ 
 
+setscore();
+  
   return (
     <>
       {/* First Navbar */}
-      {/* <Navbar bg="black" variant="dark" id="nav1">
+      <Navbar bg="black" variant="dark" id="nav1">
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"
@@ -24,17 +31,10 @@ const NavbarComp = () => {
           rel="stylesheet"
         ></link>
         <Container>
-          <Navbar.Brand href="#home">Team</Navbar.Brand>
-          <Navbar.Brand href="#home">ScoreBoard</Navbar.Brand>
-          <Navbar.Brand href="#home">Challenges</Navbar.Brand>
-          <div className="ms-auto">
-            <Navbar.Brand href="#home">Admin</Navbar.Brand>
-            <Navbar.Brand href="#home">Team</Navbar.Brand>
-            <Navbar.Brand href="#home">Profile</Navbar.Brand>
-            <Navbar.Brand href="#home">Logout</Navbar.Brand>
-          </div>
+         
+          <Navbar.Brand href="/progress">ScoreBoard</Navbar.Brand>
         </Container>
-      </Navbar> */}
+      </Navbar>
       {/* Second Navbar */}
       <Navbar variant="dark" className="py-1 custom-navbar" id="custom-navbar">
         <Container className="d-flex justify-content-between align-items-center">
@@ -58,8 +58,8 @@ const NavbarComp = () => {
             Challenges
           </Navbar.Brand>
           <div style={{ display: "flex", alignItems: "center" }}>
-            <Navbar.Brand style={{ fontWeight: "bold" }}>Points :</Navbar.Brand>
-            <Badge bg="none"> {points}</Badge>
+            <Navbar.Brand style={{ fontWeight: "bold" }}>Points:{points}</Navbar.Brand>
+            {/* <Badge bg="none"> {points}</Badge> */}
           </div>
         </Container>
       </Navbar>

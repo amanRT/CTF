@@ -10,9 +10,10 @@ function ScoreBoard() {
                 let response;
                 if (button) {
                     response = await fetch('http://localhost:3000/getuserRegister');
-                } else {
-                    response = await fetch('http://localhost:3000/selectTopUsers');
                 }
+                // } else {
+                //     response = await fetch('http://localhost:3000/selectTopUsers');
+                // }
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch scores');
@@ -29,9 +30,9 @@ function ScoreBoard() {
         fetchScores();
     }, [button]); // Depend on button state only, not scores
     
-    const handleTopUserClick = () => {
-        setButton(false);
-    };
+    // const handleTopUserClick = () => {
+    //     setButton(false);
+    // };
 
     const handleAllUserClick = () => {
         setButton(true);
@@ -58,7 +59,7 @@ function ScoreBoard() {
                     ))}
                 </tbody>
             </table>
-            <button onClick={handleTopUserClick}>Top User</button>
+            {/* <button onClick={handleTopUserClick}>Top User</button> */}
             <button onClick={handleAllUserClick}>All User</button>
         </div>
     );
