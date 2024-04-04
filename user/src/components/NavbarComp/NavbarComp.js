@@ -9,7 +9,7 @@ const NavbarComp = ({id}) => {
 
   const setscore = async () => {
     if (!id) return; // Check if id is undefined or null
-    const res = await fetch(`http://localhost:3000/getspecificuser/${id}`);
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/getspecificuser/${id}`);
     const data = await res.json();
     // setPoints(data.score);
   };
