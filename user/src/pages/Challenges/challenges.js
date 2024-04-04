@@ -6,9 +6,10 @@ import { useNavigate } from "react-router-dom";
 
 const Page = ({ id }) => {
   const navigate = useNavigate();
-  if (id == null) {
+  if (id === null) {
     navigate("/homepage");
   }
+
   return (
     <div className="App">
       <NavbarComp id={id} />

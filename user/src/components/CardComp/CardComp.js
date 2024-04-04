@@ -146,6 +146,7 @@ const CardComp = ({
         setIsCorrect(true);
         updatedScore += getQuestionPoints();
         questionArr.push(qid);
+        alert("Correct answer");
       } else {
         alert("Wrong answer!!!");
       }
