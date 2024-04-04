@@ -26,6 +26,7 @@ function ScoreBoard() {
           sum += data.scorearr[a];
         }
         setScore(sum);
+        console.log(sum);
         setScores(sortedScores);
       } catch (error) {
         console.error("Error fetching scores:", error);
