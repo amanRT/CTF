@@ -52,30 +52,29 @@ app.get("/getuserRegister", async (req, res) => {
   }
 });
 // <<<<<<< HEAD:app/app.js
-// app.get("/getspecificuser/:id",async(req,res)=>{
-//   const id=req.params.id;
+app.get("/getspecificuser/:id", async (req, res) => {
+  const id = req.params.id;
 
-//   try {
-//     const users=await UserModel.findOne({_id:id})
-//     res.status(200).json(users);
-
-//   } catch (error) {
-//     res.status(500).json({message:"Failed to fetch the user"});
-//   }
-// })
+  try {
+    const users = await UserModel.findOne({ _id: id });
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to fetch the user" });
+  }
+});
 // =======
-// app.get('/getspecificuser/:id', async (req, res) => {
+// app.get("/getspecificuser/:id", async (req, res) => {
 //   const { id } = req.params;
 
 //   try {
 //     const user = await UserModel.findById(id);
 //     if (!user) {
-//       return res.status(404).json({ message: 'User not found' });
+//       return res.status(404).json({ message: "User not found" });
 //     }
 //     res.status(200).json(user);
 //   } catch (error) {
-//     console.error('Error fetching user:', error);
-//     res.status(500).json({ message: 'Failed to fetch user' });
+//     console.error("Error fetching user:", error);
+//     res.status(500).json({ message: "Failed to fetch user" });
 //   }
 // });
 // >>>>>>> 5d6b8898d7c7959e76bd15e40638e7bbaaf29d57:app/index.js
