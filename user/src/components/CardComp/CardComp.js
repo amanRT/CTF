@@ -46,22 +46,98 @@ const CardComp = ({
     return question.points;
   };
 
+  //   const handleSave = async () => {
+  //     try {
+  //       // Fetch user score and question array
+  //       const users = await fetchUserScore();
+  //       var updatedScore = users.score;
+  //       var questionArr = users.questionArr;
+
+  //       // Check if the question ID already exists in the user's question array
+  //       if (questionArr.includes(qid)) {
+  //         alert("Question already submitted");
+  //         return;
+  //       }
+
+  //       // Update user's question array with the new question ID
+
+  //       // Update user's score if the answer is correct
+  //       if (
+  //         correctAnswer &&
+  //         textInput.toLowerCase() === correctAnswer.toLowerCase()
+  //       ) {
+  //         setIsCorrect(true);
+  //         // Assuming getQuestionPoints() returns the points for the correct answer
+  //         updatedScore += getQuestionPoints();
+  //         questionArr.push(qid);
+  //       }
+
+  //       // Update user's score and question array in the database
+  //       const response = await fetch(
+  //         `https://ctfserver.vercel.app/updateScore/${userId}`,
+  //         {
+  //           method: "PATCH",
+  //           headers: {
+  //             "Content-Type": "application/json",
+  //           },
+  //           body: JSON.stringify({
+  //             score: updatedScore,
+  //             questionArr: questionArr,
+  //           }),
+  //         }
+  //       );
+
+  //       // Check if the response is successful
+  //       if (!response.ok) {
+  //         throw new Error("Failed to update user score");
+  //       }
+
+  //       // Update the user score in the state
+  //       setUserScore({
+  //         score: updatedScore,
+  //         scorearr: users.scorearr.concat(updatedScore),
+  //       });
+  //     } catch (error) {
+  //       console.error("Error updating user score:", error);
+  //     }
+
+  //     // Reset input field
+  //     setTextInput("");
+  //   };
+
+  //   const fetchUserScore = async () => {
+  //     try {
+  //       const res = await fetch(
+  //         `https://ctfserver.vercel.app/getspecificuser/${userId}`
+  //       );
+  //       if (!res.ok) {
+  //         throw new Error("Cannot get user");
+  //       }
+
+  //       const data = await res.json();
+  //       console.log(data);
+  //       return data;
+  //     } catch (error) {
+  //       console.error("Error fetching user score:", error);
+  //     }
+  //   };
   const handleSave = async () => {
     try {
       // Fetch user score and question array
       const users = await fetchUserScore();
       var updatedScore = users.score;
-      let questionArr = users.questionArr || [];
+      let questionArr = users.questionArr;
 
       // Check if the question ID already exists in the user's question array
       if (questionArr.includes(qid)) {
         alert("Question already submitted");
         return;
       }
+      console.log(questionArr);
 
       // Update user's question array with the new question ID
-      questionArr.push(qid);
 
+      console.log(questionArr);
       // Update user's score if the answer is correct
       if (
         correctAnswer &&
@@ -69,6 +145,9 @@ const CardComp = ({
       ) {
         setIsCorrect(true);
         updatedScore += getQuestionPoints();
+        questionArr.push(qid);
+      } else {
+        alert("Wrong answer!!!");
       }
 
       // Update user's score and question array in the database
@@ -81,7 +160,6 @@ const CardComp = ({
           },
           body: JSON.stringify({
             score: updatedScore,
-            scorearr: [...userScore.scorearr, updatedScore],
             questionArr: questionArr,
           }),
         }
@@ -92,6 +170,7 @@ const CardComp = ({
         throw new Error("Failed to update user score");
       }
 
+      console.log(response);
       // Update the user score in the state
       setUserScore({
         score: updatedScore,
@@ -122,7 +201,6 @@ const CardComp = ({
       console.error("Error fetching user score:", error);
     }
   };
-
   return (
     <>
       <div onClick={handleCardClick}>
