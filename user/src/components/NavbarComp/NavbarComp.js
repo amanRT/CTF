@@ -1,23 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
+import Badge from "react-bootstrap/Badge";
 import "./MyNavbar.css";
 import logo from "./Logo_CTF-removebg-preview_upscaled.png";
 
 const NavbarComp = ({id}) => {
-  //const [points, setPoints] = useState(0);
+//   const[points,setPoints]=useState(0);
+//   const setscore=async()=>{
+//     const res =await fetch(`http://localhost:3000/getspecificuser/${id}`)
+//     const data=await res.json();
+//     setPoints(data.score);
+//   }
+ 
 
-  // const setscore = async () => {
-  //   if (!id) return; // Check if id is undefined or null
-  //   const res = await fetch(`http://localhost:3000/getspecificuser/${id}`);
-  //   const data = await res.json();
-  //   // setPoints(data.score);
-  // };
-
-  useEffect(() => {
-    setscore();
-  }, [id]); // Run setscore when id prop changes
-
+// setscore();
+  
   return (
     <>
       {/* First Navbar */}

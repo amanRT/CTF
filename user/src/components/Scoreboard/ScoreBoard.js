@@ -7,13 +7,8 @@ function ScoreBoard() {
     useEffect(() => {
         const fetchScores = async () => {
             try {
-                let response;
-                if (button) {
-                    response = await fetch(`${process.env.REACT_APP_API_URL}/getuserRegister`);
-                }
-                // } else {
-                //     response = await fetch('http://localhost:3000/selectTopUsers');
-                // }
+                let response = await fetch(`${process.env.REACT_APP_API_URL}/getuserRegister`);
+ 
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch scores');
@@ -21,7 +16,10 @@ function ScoreBoard() {
                 
                 const data = await response.json();
                 console.log('API Response:', data); // Log the API response for debugging
-                setScores(data);
+                
+                // Sort the scores by score in descending order (high to low)
+                const sortedScores = data.sort((a, b) => b.score - a.score);
+                setScores(sortedScores);
             } catch (error) {
                 console.error('Error fetching scores:', error);
             }
@@ -30,9 +28,9 @@ function ScoreBoard() {
         fetchScores();
     }, [button]); // Depend on button state only, not scores
     
-    // const handleTopUserClick = () => {
-    //     setButton(false);
-    // };
+    const handleTopUserClick = () => {
+        setButton(false);
+    };
 
     const handleAllUserClick = () => {
         setButton(true);
@@ -59,8 +57,8 @@ function ScoreBoard() {
                     ))}
                 </tbody>
             </table>
-            {/* <button onClick={handleTopUserClick}>Top User</button> */}
-            <button onClick={handleAllUserClick}>All User</button>
+           
+            {/* <button onClick={handleAllUserClick}>All User</button> */}
         </div>
     );
 }

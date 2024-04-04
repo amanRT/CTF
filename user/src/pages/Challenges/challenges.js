@@ -21,7 +21,7 @@ const Page = ({ id }) => {
             title={question.title}
             domain={question.domain}
             qdes={question.question}
-            description={`${question.points} points`}
+            description={question.points}
             alertDesc="Description of the question"
             flagPattern={question.Format}
             hintUrl={question.attachment}
