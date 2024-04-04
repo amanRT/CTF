@@ -9,7 +9,7 @@ function ScoreBoard() {
             try {
                 let response;
                 if (button) {
-                    response = await fetch('http://localhost:3000/getuserRegister');
+                    response = await fetch(`${process.env.REACT_APP_API_URL}/getuserRegister`);
                 }
                 // } else {
                 //     response = await fetch('http://localhost:3000/selectTopUsers');
