@@ -5,14 +5,14 @@ import "./MyNavbar.css";
 import logo from "./Logo_CTF-removebg-preview_upscaled.png";
 
 const NavbarComp = ({id}) => {
-  //const [points, setPoints] = useState(0);
+  const [points, setPoints] = useState(0);
 
-  // const setscore = async () => {
-  //   if (!id) return; // Check if id is undefined or null
-  //   const res = await fetch(`http://localhost:3000/getspecificuser/${id}`);
-  //   const data = await res.json();
-  //   // setPoints(data.score);
-  // };
+  const setscore = async () => {
+    if (!id) return; // Check if id is undefined or null
+    const res = await fetch(`http://localhost:3000/getspecificuser/${id}`);
+    const data = await res.json();
+    // setPoints(data.score);
+  };
 
   useEffect(() => {
     setscore();
