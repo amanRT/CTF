@@ -184,7 +184,7 @@ function LineGraph() {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch("http://localhost:3000/getuserRegister")
+      fetch(`${process.env.REACT_APP_API_URL}/getuserRegister`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
