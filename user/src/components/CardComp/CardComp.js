@@ -4,6 +4,7 @@ import "./cardComp.css";
 import questionsData from "./questions.json";
 
 const CardComp = ({
+  qid,
   title,
   domain,
   qdes,
@@ -20,7 +21,7 @@ const CardComp = ({
   const [submitted, setSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [userScore, setUserScore] = useState({ score: 0, scorearr: [] });
-  const [sc, setScore] = useState(0);
+
   const handleCardClick = () => {
     setShowModal(true);
   };
@@ -46,26 +47,31 @@ const CardComp = ({
   };
 
   const handleSave = async () => {
-    if (userScore.scorearr.length >= 8) return;
-    setShowModal(false);
-    setSubmitted(true);
-
-    var updatedScore;
-    var updatedScoreArr;
-
-    if (
-      correctAnswer &&
-      textInput.toLowerCase() === correctAnswer.toLowerCase()
-    ) {
-      setIsCorrect(true);
-      updatedScore = sc + getQuestionPoints();
-
-      // Create a new array with updated score added
-    } else {
-      updatedScore = userScore.score;
-    }
-    updatedScoreArr = [...userScore.scorearr, updatedScore];
     try {
+      // Fetch user score and question array
+      const users = await fetchUserScore();
+      var updatedScore = users.score;
+      let questionArr = users.questionArr || [];
+
+      // Check if the question ID already exists in the user's question array
+      if (questionArr.includes(qid)) {
+        alert("Question already submitted");
+        return;
+      }
+
+      // Update user's question array with the new question ID
+      questionArr.push(qid);
+
+      // Update user's score if the answer is correct
+      if (
+        correctAnswer &&
+        textInput.toLowerCase() === correctAnswer.toLowerCase()
+      ) {
+        setIsCorrect(true);
+        updatedScore += getQuestionPoints();
+      }
+
+      // Update user's score and question array in the database
       const response = await fetch(
         `https://ctfserver.vercel.app/updateScore/${userId}`,
         {
@@ -75,43 +81,47 @@ const CardComp = ({
           },
           body: JSON.stringify({
             score: updatedScore,
-            scorearr: updatedScoreArr,
+            scorearr: [...userScore.scorearr, updatedScore],
+            questionArr: questionArr,
           }),
         }
       );
+
+      // Check if the response is successful
       if (!response.ok) {
         throw new Error("Failed to update user score");
       }
-      setUserScore({ score: updatedScore, scorearr: updatedScoreArr });
+
+      // Update the user score in the state
+      setUserScore({
+        score: updatedScore,
+        scorearr: [...userScore.scorearr, updatedScore],
+      });
     } catch (error) {
       console.error("Error updating user score:", error);
     }
 
+    // Reset input field
     setTextInput("");
   };
 
-  useEffect(() => {
-    const fetchUserScore = async () => {
-      try {
-        const res = await fetch(
-          `https://ctfserver.vercel.app/getspecificuser/${userId}`
-        );
-        if (!res.ok) {
-          throw new Error("Cannot get user");
-        }
-        const data = await res.json();
-        var sum = 0;
-        for (var a = 0; a < data.scorearr.length; a++) {
-          sum += data.scorearr[a];
-        }
-        setScore(sum);
-        setUserScore({ score: data.score, scorearr: data.scorearr });
-      } catch (error) {
-        console.error("Error fetching user score:", error);
+  const fetchUserScore = async () => {
+    try {
+      const res = await fetch(
+        `https://ctfserver.vercel.app/getspecificuser/${userId}`
+      );
+      if (!res.ok) {
+        throw new Error("Cannot get user");
       }
-    };
-    fetchUserScore();
-  }, [handleSave]);
+
+      const data = await res.json();
+      console.log(data);
+      setUserScore({ score: data.score, scorearr: data.scorearr });
+      return data;
+    } catch (error) {
+      console.error("Error fetching user score:", error);
+    }
+  };
 
   return (
     <>

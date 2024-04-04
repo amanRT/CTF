@@ -15,6 +15,7 @@ const Page = ({ id }) => {
       <div className="d-flex flex-wrap justify-content-evenly">
         {questionsData.map((question) => (
           <CardComp
+            qid={question.id}
             key={question.id}
             title={question.title}
             domain={question.domain}

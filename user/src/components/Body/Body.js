@@ -10,7 +10,7 @@ function Body({id}) {
     
         const fetchData = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/getspecificuser/${id}`);
+                const response = await fetch(`https://ctfserver.vercel.app/getspecificuser/${id}`);
                 const data = await response.json();
                 
                 if (data.is_Selected === true) {
