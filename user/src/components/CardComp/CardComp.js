@@ -101,7 +101,7 @@ const CardComp = ({
         }
         const data = await res.json();
         var sum = 0;
-        for (const a = 0; a < data.scorearr.length; a++) {
+        for (var a = 0; a < data.scorearr.length; a++) {
           sum += data.scorearr[a];
         }
         setScore(sum);

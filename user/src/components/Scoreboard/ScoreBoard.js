@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 function ScoreBoard() {
   const [scores, setScores] = useState([]);
   const [button, setButton] = useState(true);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     const fetchScores = async () => {
@@ -20,6 +21,11 @@ function ScoreBoard() {
 
         // Sort the scores by score in descending order (high to low)
         const sortedScores = data.sort((a, b) => b.score - a.score);
+        var sum = 0;
+        for (var a = 0; a < data.scorearr.length; a++) {
+          sum += data.scorearr[a];
+        }
+        setScore(sum);
         setScores(sortedScores);
       } catch (error) {
         console.error("Error fetching scores:", error);
