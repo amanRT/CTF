@@ -20,7 +20,7 @@ const CardComp = ({
   const [submitted, setSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
   const [userScore, setUserScore] = useState({ score: 0, scorearr: [] });
-  const [score, setScore] = useState(0);
+  const [sc, setScore] = useState(0);
   const handleCardClick = () => {
     setShowModal(true);
   };
@@ -58,7 +58,7 @@ const CardComp = ({
       textInput.toLowerCase() === correctAnswer.toLowerCase()
     ) {
       setIsCorrect(true);
-      updatedScore = score + getQuestionPoints();
+      updatedScore = sc + getQuestionPoints();
 
       // Create a new array with updated score added
     } else {
