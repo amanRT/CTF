@@ -101,22 +101,35 @@ app.post("/login", async (req, res) => {
 
 app.patch("/updateScore/:id", async (req, res) => {
   const id = req.params.id;
-  const { score } = req.body;
+  const { score, questionArr } = req.body;
+
   try {
     const date = new Date();
     const hours = ("0" + date.getHours()).slice(-2);
     const minutes = ("0" + date.getMinutes()).slice(-2);
     const timestamp = `${hours}:${minutes}`;
-    await UserModel.findOneAndUpdate(
+
+    // Update the user document
+    const updatedUser = await UserModel.findOneAndUpdate(
       { _id: id },
       {
-        $set: { score: score, lastUpdated: timestamp },
-        $push: { scorearr: score },
+        $set: {
+          score: score,
+          lastUpdated: timestamp,
+          questionArr: questionArr,
+        },
+        $push: { scorearr: score }, // Ensure scorearr is defined in your schema
       },
       { new: true }
     );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
     res.status(200).json({ message: "Score updated successfully" });
   } catch (error) {
+    console.error(error);
     res.status(500).json({ message: "Failed to update the score" });
   }
 });
