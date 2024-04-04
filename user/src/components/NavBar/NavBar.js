@@ -30,7 +30,7 @@ export default function NavBar() {
                     {/* <li><Link to="/graph">Graph</Link></li> */}
 
                     <li><Link to="/progress">Progress</Link></li>
-                    <li><Link to="/challenges">Challenges</Link></li>
+                    <li><Link to="/challenges">Challenge 1</Link></li>
                 </ul>
             </nav>
             {/* <Outlet /> */}

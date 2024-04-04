@@ -1,20 +1,88 @@
-[
-    {
+
+ [
+      {
         "id": 1,
-        "question": "What is the capital of France?",
-        "answer": "Paris",
-        "points": 10
-    },
-    {
+        "domain":"CRYPTOGRAPHY",
+        "title":"DEC",
+        "question": "Get the Flag from: CXIV XCIX CXI CI CIX LXVII LXXXIV LXX CXXIII DCLIV XLVIII CXVII XCV CCCXC CXIV LXIV XCIX LXIX LXVIII XCV LXXXII XLVIII CIX LXIV CX XCV LXXXV CIX LXIX CXIV LXIV CVIII CXV CXXV",
+        "Format": "RCOEMCTF{}",
+        "answer": "RCOEMCTF{ʎ0U_ƆR@CED_R0M@N_UMER@LS}",
+        "points": 200,
+        "attachment":null
+      },
+      {
         "id": 2,
-        "question": "Who wrote 'Romeo and Juliet'?",
-        "answer": "William Shakespeare",
-        "points": 15
-    },
-    {
+        "domain":"CRYPTOGRAPHY",
+        "title":"DEC 2",
+        "question": "WlhCaWNucFFSMU43Y0c1eVptNWxYM0V6Y0dVNVkyY3pjVjg0T1RCeE1qTTNPWDA9",
+        "Format": "rcoemCTF{}",
+        "answer": "rcoemCTF{caesar_d3cr9pt3d_890d2379}",
+        "points": 300,
+        "attachment":null
+      },
+      
+      {
         "id": 3,
-        "question": "What is the square root of 16?",
-        "answer": "4",
-        "points": 5
-    }
+        "domain":"FORENSICS",
+        "title":"File",
+        "question": "Flag is Hidden in the given File in Plain text format..",
+        "Format": "rcoemCTF{}",
+        "answer": "rcoemCTF{s4n1ty_v3r1f13d_f28ac910}",
+        "points": 150,
+        "attachment":"https://drive.google.com/file/d/1qav7gwl0UgRc_IeKmbI9fBCElDMna0CY/view?usp=sharing"
+      },
+      {
+        "id": 4,
+        "domain":"FORENSICS",
+        "title":"Zip",
+        "question": "Find the Flag From Attachment....",
+        "Format": "rcoemCTF{}",
+        "answer": "rcoemCTF{R0t-I3_deC0dEd}",
+        "points": 200,
+        "attachment":"https://drive.google.com/file/d/1D6hmIy8gNPIhSjcWG2YW9cCahnKdB6Aw/view?usp=drive_link"
+      },
+      
+      {
+        "id": 5,
+        "domain":"OSINT",
+        "title":"Venue",
+        "question": "Get the Host Venue For the Event Shown in the Images Given ....",
+        "Hint": "The Flag will be the Host Venue Name Found",
+        "Format": "rcoemCTF{}",
+        "answer": "rcoemCTF{Laem_Chabang_International_Country_Club}",
+        "points": 300,
+        "attachment":"https://drive.google.com/drive/folders/1bxTAX9m8LwbCX0rbahcvZg2scgN2N_Pw?usp=drive_link "
+      },
+      {
+        "id": 6,
+        "domain":"OSINT",
+        "title":"Wait Wait",
+        "question": "In which City This Is Located...",
+        "Hint": "The Flag will be your City name (Not-Case-Sensitive)",
+        "Format": "rcoemCTF{}",
+        "answer": "rcoemCTF{newyork}",
+        "points": 150,
+        "attachment":"https://drive.google.com/file/d/1Gt71wpg9rMum1iLTKYLVKBR0_O59Oc16/view?usp=drive_link"
+      },
+      {
+        "id": 7,
+        "domain":"WEB",
+        "title":"Find Me",
+        "question": "Get the Flag: http://bucketsoffun-ctf.s3-website-us-east-1.amazonaws.com/",
+        "Hint": "Files",
+        "Format": "RITSEC{}",
+        "answer": "RITSEC{LIST_HIDDEN_FILES}",
+        "points": 200,
+        "attachment":null
+      },
+      {
+        "id": 8,
+        "domain":"WEB",
+        "title":"See",
+        "question": "Get the Flag....",
+        "Format": "rcoemCTF{}",
+        "answer": "rcoemCTF{u_can_read_THe_Code}",
+        "points": 100,
+        "attachment":"https://drive.google.com/file/d/1uLpfiW1vbj5p91OjW2Y5wnfY-lGqYGnd/view?usp=drive_link"
+      }
 ]

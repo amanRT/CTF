@@ -60,7 +60,7 @@ app.post("/login",async(req,res)=>{
     const correctpass=bcryptjs.compare(password, user.password);
   if(correctpass)
   {
-      res.status(200).json(user._id);
+      res.status(200).json({message:"User LogedIn Successfully",id : user._id});
   }
   else{
      res.status(401).json({message:"Invalid Credentials"});
@@ -93,7 +93,7 @@ app.patch("/updateScore/:id", async (req, res) => {
 
 app.get("/selectTopUsers", async (req, res) => {
   try {
-    const topUsers = await UserModel.find().sort({ score: -1 }).limit(4);
+    const topUsers = await UserModel.find().sort({ score: -1 }).limit(10);
 
     if (topUsers.length > 0) {
       for (const user of topUsers) {
@@ -120,7 +120,8 @@ app.get("/nextRound", async (req, res) => {
 
     if (nextRoundCandidates.length > 0) {
       for (const user of nextRoundCandidates) {
-        user.score = "0";
+        user.score = "0"
+        user.scorearr=[]
         await user.save();
       }
     }
@@ -128,8 +129,8 @@ app.get("/nextRound", async (req, res) => {
     res
       .status(200)
       .json({
-        message: "Users reset successfully",
-        NextRoundCandidates: nextRoundCandidates,
+        message: "Users reset successfully"
+        // NextRoundCandidates: nextRoundCandidates,
       });
   } catch (error) {
     console.error("Error resetting users for next round:", error);

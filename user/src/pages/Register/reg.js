@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import './Registration.css';
 import { Link } from "react-router-dom";
 import {useNavigate} from "react-router-dom";
+import Navbar from "../../components/Navbar1/Navbar";
 
 function Reg() {
     const [teamname, setTeamName] = useState('');
@@ -17,7 +18,7 @@ function Reg() {
         e.preventDefault();
     
         try {
-            const response = await fetch("http://localhost:3000/userRegister", {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/userRegister`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -40,6 +41,8 @@ function Reg() {
     }
 
     return (
+        <>
+        <Navbar/>
         <div id="registration-section" className="body">
             <section id="reg-sec">
                 <div className="register-login-box">
@@ -89,6 +92,7 @@ function Reg() {
                 </div>
             </section>
         </div>
+        </>
     );
 }
 

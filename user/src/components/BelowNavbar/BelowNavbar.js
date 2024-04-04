@@ -12,7 +12,7 @@ export default function BelowNavbar() {
           <br/> <br/>
 Participants competing in teams or individually to solve a series of challenges that test their Cybersecurity skills, such as General Skills, Cryptography, Web Exploitation, Forensics & OSINT.</p>
 
-<h2>🚩Catch The Flag🚩</h2>
+<h2>🚩Capture The Flag🚩</h2>
       </div>
       <div className='Below-Navbarimage'>
         <img src={aigenerated} alt="" />

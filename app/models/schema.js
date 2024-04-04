@@ -33,10 +33,10 @@ const UserSchema = new mongoose.Schema({
     },
    
     score:{
-        type:String,
+        type:Number,
         default:0
     },
-    scorearr:[{type:String}],
+    scorearr:[{type:Number}],
     is_Selected: {
         type: Boolean,
         default: false,

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './login.css';
 import { Link, useNavigate } from 'react-router-dom';
+import NavBar1 from '../../components/Navbar1/Navbar';
 
 const Login = ({ setId }) => {
     const [email, setEmail] = useState('');
@@ -11,7 +12,7 @@ const Login = ({ setId }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3000/login', {
+            const response = await fetch(`${process.env.REACT_APP_API_URL}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -23,8 +24,8 @@ const Login = ({ setId }) => {
                 throw new Error('Enter valid credentials');
             }
             const data = await response.json();
-            setId(data._id); // Set the user ID using the setId function
-            console.log(data);
+            setId(data.id); // Set the user ID using the setId function
+          
 
             navigate('/Homepage');
 
@@ -35,6 +36,9 @@ const Login = ({ setId }) => {
     };
 
     return (
+        <>
+       
+        <NavBar1/>
         <div className="body">
             <section id="login-sec">
                 <div className="login-box">
@@ -59,6 +63,7 @@ const Login = ({ setId }) => {
                 </div>
             </section>
         </div>
+        </>
     );
 }
 

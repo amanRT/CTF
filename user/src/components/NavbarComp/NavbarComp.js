@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Badge from "react-bootstrap/Badge";
 import "./MyNavbar.css";
 import logo from "./Logo_CTF-removebg-preview_upscaled.png";
 
-const NavbarComp = () => {
-  // Sample points value for demonstration
-  const points = 0;
+const NavbarComp = ({id}) => {
+//   const[points,setPoints]=useState(0);
+//   const setscore=async()=>{
+//     const res =await fetch(`http://localhost:3000/getspecificuser/${id}`)
+//     const data=await res.json();
+//     setPoints(data.score);
+//   }
+ 
 
+// setscore();
+  
   return (
     <>
       {/* First Navbar */}
@@ -24,15 +31,8 @@ const NavbarComp = () => {
           rel="stylesheet"
         ></link>
         <Container>
-          <Navbar.Brand href="#home">Team</Navbar.Brand>
-          <Navbar.Brand href="#home">ScoreBoard</Navbar.Brand>
-          <Navbar.Brand href="#home">Challenges</Navbar.Brand>
-          <div className="ms-auto">
-            <Navbar.Brand href="#home">Admin</Navbar.Brand>
-            <Navbar.Brand href="#home">Team</Navbar.Brand>
-            <Navbar.Brand href="#home">Profile</Navbar.Brand>
-            <Navbar.Brand href="#home">Logout</Navbar.Brand>
-          </div>
+         
+          <Navbar.Brand href="/progress">ScoreBoard</Navbar.Brand>
         </Container>
       </Navbar>
       {/* Second Navbar */}
@@ -58,8 +58,8 @@ const NavbarComp = () => {
             Challenges
           </Navbar.Brand>
           <div style={{ display: "flex", alignItems: "center" }}>
-            <Navbar.Brand style={{ fontWeight: "bold" }}>Points :</Navbar.Brand>
-            <Badge bg="none"> {points}</Badge>
+            {/* <Navbar.Brand style={{ fontWeight: "bold" }}>Points:{points}</Navbar.Brand> */}
+            {/* <Badge bg="none"> {points}</Badge> */}
           </div>
         </Container>
       </Navbar>

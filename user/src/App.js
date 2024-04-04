@@ -10,13 +10,14 @@ import {
 import Reg from './pages/Register/reg';
 import Login from './pages/Login/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from './components/NavbarComp/NavbarComp';
-import Challenges from './pages/Challenges/challenges';
+// import NavbarComp from './components/NavbarComp/NavbarComp';
+import Page from './pages/Challenges/challenges';
 import MainLayout from './components/MainLayout/MainLayout';
 import Progress from './pages/Progress/Progress';
+import Page2 from './pages/Challenges/challenges2';
 
 function App() {
-  const [id, setId] = useState('');
+  const [id, setId] = useState();
 
   return (
     <Router>
@@ -25,7 +26,8 @@ function App() {
         <Route path="/login" element={<Login setId={setId} />} /> {/* Use Login component inside Route */}
         <Route path="/Homepage" element={<HomePage id={id} />} /> {/* Use Homepage component inside Route */}
         <Route exact path="/register" element={<Reg />} />
-        <Route exact path="/challenges" element={<Challenges />} />
+        <Route  path="/challenges" element={<Page id={id}/>} />
+        <Route  path="/challenges2" element={<Page2 id={id}/>} />
         <Route path='/progress' element={<Progress />} />
       </Routes>
     </Router>
