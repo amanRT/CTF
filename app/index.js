@@ -163,6 +163,7 @@ app.get("/nextRound", async (req, res) => {
       for (const user of nextRoundCandidates) {
         user.score = "0";
         user.scorearr = [];
+        user.questionArr = [];
         await user.save();
       }
     }
