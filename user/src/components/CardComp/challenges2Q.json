@@ -1,116 +1,116 @@
- [
-      {
-        "id": 1,
-        "title":"Half-Key",
-        "domain":"CRYPTOGRAPHY",
-        "question": "Robert intercepted a message sent to 5 people Encrypted using RSA. He only got the First Half. Can you decipher it?",
-        "Format": "p_ctf{}",
-        "answer": "p_ctf{p&dd1ngPr3vent$h@stAd$_a%%ack}",
-        "points": 300,
-        "attachment":"https://drive.google.com/file/d/1tsnHIzLZMOV_kR_QgaL8eb1Vx_SB0aIo/view?usp=drive_link"
-      },
-      {
-        "id": 2,
-        "title":"Broken-Key",
-        "domain":"CRYPTOGRAPHY",
-        "question": "XOR-ing the two most important numbers for RSA will give you the XOR key.",
-        "Format": "p_ctf{}",
-        "answer": "p_ctf{0n3_1eak_15_en0u6h_70_4774ck_rsa}",
-        "points": 250,
-        "attachment":"https://drive.google.com/drive/folders/1Kb8LiIsb1JQbix4whESVdofYYFaQ4tK6?usp=sharing"
-      },
-      {
-        "id": 3,
-        "title":"No Love",
-        "domain":"FORENSICS",
-        "question": "You have a File creamroll.pdf Find the Flag from the file..... Remember ** Browse all the bit planes and get our flag in one of them **",
-        "Hint": "UGFzc3dvcmQ6IHBhc3N3b3JkMTIzNDU2",
-        "Format": "p_ctf{ }",
-        "answer": "p_ctf{R1ck_4stl3y_f0r_pr3s1d3nt}",
-        "points": 400,
-        "attachment":"https://drive.google.com/file/d/1ejufnNrbb5d9SgFh1Op8zcFvu5UKdeo5/view?usp=drive_link"
-      },
-      {
-        "id": 4,
-        "title":"Investigate",
-        "domain":"FORENSICS",
-        "question": "Robert Case is Pending since 3 months. Can you Solve his case.",
-        "Hint": "You can use the Browser",
-        "Format": "rcoemCTF{}",
-        "answer": "rcoemCTF{1_533_n4m35_80d24b30}",
-        "points": 300,
-        "attachment":"https://drive.google.com/file/d/1PTCdG15833ntpXnbOC8p8U6bOYfx9nSD/view?usp=drive_link"
-      },
-      {
-        "id": 5,
-        "title":"Get The Light",
-        "domain":"FORENSICS",
-        "question": "Just Get the Flag ",
-        "Format": "Flag{}",
-        "answer": "Flag{So-L!gHt}",
-        "points": 200,
-        "attachment":"https://drive.google.com/file/d/1RPMQVE65c3AOe0mpjmfx9vNVNQ5J4nsj/view?usp=drive_link"
-      },
-      {
-        "id": 6,
-        "title":"Boy",
-        "domain":"FORENSICS",
-        "question": "Rinku a Passionate Fighter wants to tell you a Story.What it is ?",
-        "Format": "FLAG{}",
-        "answer": "FLAG{LSB_!$SuP3r_DuP3r_E@syy!_}",
-        "points": 150,
-        "attachment":"https://drive.google.com/file/d/1vpDT0e54TO6Y2lO4fZ6sf6VTpn2CLEDZ/view?usp=drive_link"
-      },
-      {
-        "id": 7,
-        "title":"Traning",
-        "domain":"OSINT",
-        "question": "The Flag will be the name of Training Range... Get the Name from the Picture ",
-        "Hint": "UPPERCASE",
-        "Format": "rcoemCTF{}",
-        "answer": "rcoemCTF{NEVADA}",
-        "points": 150,
-        "attachment":"https://drive.google.com/file/d/1yknbD1--eAcY2yisLCAtvBzgP3u5Nti2/view?usp=drive_link"
-      },
-      {
-        "id": 8,
-        "title":"Social Bird",
-        "domain":"OSINT",
-        "question": "Search for an Account @piratesofrcoem , Get the Flag From the Post... Flag will be the (Director Name)",
-        "Hint": "{xxxxx_xxxxxxx}",
-        "Format": "rcoemCTF{}",
-        "answer": "rcoemCTF{david_attwood}",
-        "points": 100,
-        "attachment":null
-      },
-      {
-        "id": 9,
-        "title":"File",
-        "domain":"OSINT",
-        "question": "A Network Operator Picked up a Suspicious file having Some information. They are not sure about what type of file it is. They Told you to examine the File. Can you extract all information from the Flag.",
-        "Format": "p___CTF{}",
-        "answer": "picoCTF{f1u3n7_1n_pn9_&_pdf_2a6a1ea8}",
-        "points": 100,
-        "attachment":"https://drive.google.com/file/d/11uNK5hMEJNSHgxm-a1YZke1Nu-18NviW/view?usp=drive_link"
-      },
-      {
-        "id": 10,
-        "title":"Look",
-        "domain":"WEB",
-        "question": "Get the Flag....",
-        "Format":  "rcoemCTF{}",
-        "answer": "rcoemCTF{Th1nK_0uT_0F_m1nD}",
-        "points": 200,
-        "attachment":"https://drive.google.com/file/d/17LjDHNLcO9cIEZ1it2kuJfxENvGoDSc3/view?usp=drive_link"
-      },
-      {
-        "id": 11,
-        "title":"Easy",
-        "domain":"WEB",
-        "question": "File is given....",
-        "Format": "rcoemCTF{}",
-        "answer": "rcoemCTF{SimPLe_0n3}",
-        "points": 100,
-        "attachment":"https://drive.google.com/file/d/1f5yBgbww7Kzd1ycw0G7gdmNf1_hloiH0/view?usp=drive_link"
+[
+  {
+    "id": 1,
+    "title": "Half-Key",
+    "domain": "CRYPTOGRAPHY",
+    "question": "Robert intercepted a message sent to 5 people Encrypted using RSA. He only got the First Half. Can you decipher it?",
+    "Format": "p_ctf{}",
+    "answer": "p_ctf{p&dd1ngPr3vent$h@stAd$_a%%ack}",
+    "points": 300,
+    "attachment": "https://drive.google.com/file/d/1tsnHIzLZMOV_kR_QgaL8eb1Vx_SB0aIo/view?usp=drive_link"
+  },
+  {
+    "id": 2,
+    "title": "Broken-Key",
+    "domain": "CRYPTOGRAPHY",
+    "question": "XOR-ing the two most important numbers for RSA will give you the XOR key.",
+    "Format": "p_ctf{}",
+    "answer": "p_ctf{0n3_1eak_15_en0u6h_70_4774ck_rsa}",
+    "points": 250,
+    "attachment": "https://drive.google.com/drive/folders/1Kb8LiIsb1JQbix4whESVdofYYFaQ4tK6?usp=sharing"
+  },
+  {
+    "id": 3,
+    "title": "No Love",
+    "domain": "FORENSICS",
+    "question": "You have a File creamroll.pdf Find the Flag from the file..... Remember ** Browse all the bit planes and get our flag in one of them **",
+    "Hint": "UGFzc3dvcmQ6IHBhc3N3b3JkMTIzNDU2",
+    "Format": "p_ctf{ }",
+    "answer": "p_ctf{R1ck_4stl3y_f0r_pr3s1d3nt}",
+    "points": 400,
+    "attachment": "https://drive.google.com/file/d/1ejufnNrbb5d9SgFh1Op8zcFvu5UKdeo5/view?usp=drive_link"
+  },
+  {
+    "id": 4,
+    "title": "Investigate",
+    "domain": "FORENSICS",
+    "question": "Robert Case is Pending since 3 months. Can you Solve his case.",
+    "Hint": "You can use the Browser",
+    "Format": "rcoemCTF{}",
+    "answer": "rcoemCTF{1_533_n4m35_80d24b30}",
+    "points": 300,
+    "attachment": "https://drive.google.com/file/d/1PTCdG15833ntpXnbOC8p8U6bOYfx9nSD/view?usp=drive_link"
+  },
+  {
+    "id": 5,
+    "title": "Get The Light",
+    "domain": "FORENSICS",
+    "question": "Just Get the Flag ",
+    "Format": "Flag{}",
+    "answer": "Flag{So-L!gHt}",
+    "points": 200,
+    "attachment": "https://drive.google.com/file/d/1RPMQVE65c3AOe0mpjmfx9vNVNQ5J4nsj/view?usp=drive_link"
+  },
+  {
+    "id": 6,
+    "title": "Boy",
+    "domain": "FORENSICS",
+    "question": "Rinku a Passionate Fighter wants to tell you a Story.What it is ?",
+    "Format": "FLAG{}",
+    "answer": "FLAG{LSB_!$_SuP3r_DuP3r_E@syy_!_}",
+    "points": 150,
+    "attachment": "https://drive.google.com/file/d/1vpDT0e54TO6Y2lO4fZ6sf6VTpn2CLEDZ/view?usp=drive_link"
+  },
+  {
+    "id": 7,
+    "title": "Traning",
+    "domain": "OSINT",
+    "question": "The Flag will be the name of Training Range... Get the Name from the Picture ",
+    "Hint": "UPPERCASE",
+    "Format": "rcoemCTF{}",
+    "answer": "rcoemCTF{NEVADA}",
+    "points": 150,
+    "attachment": "https://drive.google.com/file/d/1yknbD1--eAcY2yisLCAtvBzgP3u5Nti2/view?usp=drive_link"
+  },
+  {
+    "id": 8,
+    "title": "Social Bird",
+    "domain": "OSINT",
+    "question": "Search for an Account @piratesofrcoem , Get the Flag From the Post... Flag will be the (Director Name)",
+    "Hint": "{xxxxx_xxxxxxx}",
+    "Format": "rcoemCTF{}",
+    "answer": "rcoemCTF{david_attwood}",
+    "points": 100,
+    "attachment": null
+  },
+  {
+    "id": 9,
+    "title": "File",
+    "domain": "OSINT",
+    "question": "A Network Operator Picked up a Suspicious file having Some information. They are not sure about what type of file it is. They Told you to examine the File. Can you extract all information from the Flag.",
+    "Format": "p___CTF{}",
+    "answer": "picoCTF{f1u3n7_1n_pn9_&_pdf_2a6a1ea8}",
+    "points": 100,
+    "attachment": "https://drive.google.com/file/d/11uNK5hMEJNSHgxm-a1YZke1Nu-18NviW/view?usp=drive_link"
+  },
+  {
+    "id": 10,
+    "title": "Look",
+    "domain": "WEB",
+    "question": "Get the Flag....",
+    "Format": "rcoemCTF{}",
+    "answer": "rcoemCTF{Th1nK_0uT_0F_m1nD}",
+    "points": 200,
+    "attachment": "https://drive.google.com/file/d/17LjDHNLcO9cIEZ1it2kuJfxENvGoDSc3/view?usp=drive_link"
+  },
+  {
+    "id": 11,
+    "title": "Easy",
+    "domain": "WEB",
+    "question": "File is given....",
+    "Format": "rcoemCTF{}",
+    "answer": "rcoemCTF{SimPLe_0n3}",
+    "points": 100,
+    "attachment": "https://drive.google.com/file/d/1f5yBgbww7Kzd1ycw0G7gdmNf1_hloiH0/view?usp=drive_link"
   }
 ]
