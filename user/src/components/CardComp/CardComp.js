@@ -133,11 +133,9 @@ const CardComp = ({
         alert("Question already submitted");
         return;
       }
-      console.log(questionArr);
 
       // Update user's question array with the new question ID
 
-      console.log(questionArr);
       // Update user's score if the answer is correct
       if (
         correctAnswer &&

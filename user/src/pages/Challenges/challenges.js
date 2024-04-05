@@ -1,7 +1,7 @@
 import React from "react";
 import NavbarComp from "../../components/NavbarComp/NavbarComp";
 import CardComp from "../../components/CardComp/CardComp";
-import questionsData from "../../components/CardComp/questions.json";
+import questionsData from "../../components/CardComp/challenges2Q.json";
 import { useNavigate } from "react-router-dom";
 
 const Page = ({ id }) => {
