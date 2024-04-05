@@ -28,7 +28,7 @@ function App() {
         <Route path="/Homepage" element={<HomePage id={id} />} />
         <Route exact path="/register" element={<Reg />} />
         {/* <Route path="/challenges" element={<Page id={id} />} /> */}
-        <Route path="/challenges" element={<Page id={id} />} />
+        <Route path="/challenges2" element={<Page id={id} />} />
 
         <Route path="/progress" element={<Progress />} />
       </Routes>
