@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Card, Button, Modal, Form } from "react-bootstrap";
 import "./cardComp.css";
-import questionsData from "./questions.json";
+import questionsData from "./challenges2Q.json";
 
 const CardComp = ({
   qid,
